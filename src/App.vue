@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { PButton } from 'pandora-design-system'
+import "./main.scss"
+import PandoraHeader from "./components/PandoraHeader.vue"
 </script>
 
 <template>
@@ -8,7 +9,8 @@ import { PButton } from 'pandora-design-system'
   </header>
 
   <main>
-    <p-button type="secondary">jfnvjkerkjv</p-button>
+    test
+    <pandora-header />
   </main>
 </template>
 
