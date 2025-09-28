@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@types/sass": "^1.45.0",
-    "pandora-design-system": "^0.0.8",
+    "pandora-design-system": "^0.0.10",
     "pandora-icons": "^0.0.2",
     "sass": "^1.93.2",
     "vue": "^3.5.18"

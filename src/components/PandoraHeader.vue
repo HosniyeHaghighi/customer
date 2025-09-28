@@ -1,11 +1,11 @@
 <template>
-  <div class="w-full flex items-center justify-between">
+  <div class="w-full flex items-center justify-between p-5">
     <div class="flex flex-col">
       <PBreadcrumb>
         <span>کاربران</span>
         <span>کاربر 45675</span>
       </PBreadcrumb>
-      <span></span>
+      <span class="p-text-primary-60">جزئیات پرونده و مشخصات کاربری</span>
       <!-- <PMenu></PMenu> -->
     </div>
     <div class="">

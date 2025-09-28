@@ -5,14 +5,16 @@ import PForm from './components/PForm.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper"></div>
-  </header>
+  <div dir="rtl">
+    <header>
+      <div class="wrapper"></div>
+    </header>
 
-  <main>
-    <pandora-header />
-    <p-form></p-form>
-  </main>
+    <main>
+      <pandora-header class="p-6"/>
+      <!-- <p-form></p-form> -->
+    </main>
+  </div>
 </template>
 
 <style scoped></style>
