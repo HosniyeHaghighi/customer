@@ -1,0 +1,65 @@
+.identity-form-container {
+  @apply w-full bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden;
+}
+
+.identity-form-header {
+  @apply p-6 border-b border-gray-200 bg-gray-50;
+}
+
+.identity-form-header-content {
+  @apply flex items-center justify-between;
+}
+
+.identity-form-header-info {
+  @apply flex items-center gap-3;
+}
+
+.identity-form-icon {
+  @apply w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center;
+}
+
+.identity-form-icon-svg {
+  @apply w-4 h-4 text-blue-600;
+}
+
+.identity-form-title {
+  @apply text-lg font-semibold text-gray-900 m-0;
+}
+
+.identity-form-header-actions {
+  @apply flex items-center gap-2;
+}
+
+.identity-form-content {
+  @apply p-6;
+}
+
+.identity-form-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8;
+}
+
+.identity-form-column {
+  @apply flex flex-col gap-6;
+}
+
+.identity-form-field {
+  @apply w-full;
+}
+
+.identity-form-actions {
+  @apply flex items-center justify-end gap-3 mt-8 pt-6 border-t border-gray-200;
+}
+
+@media (max-width: 768px) {
+  .identity-form-grid {
+    @apply grid-cols-1;
+  }
+  
+  .identity-form-header-content {
+    @apply flex-col gap-4 items-start;
+  }
+  
+  .identity-form-actions {
+    @apply flex-col-reverse items-stretch;
+  }
+}

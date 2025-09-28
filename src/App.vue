@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import "./main.scss"
-import PandoraHeader from "./components/PandoraHeader.vue"
+import './main.scss'
+import PandoraHeader from './components/PandoraHeader.vue'
+import PForm from './components/PForm.vue'
 </script>
 
 <template>
@@ -9,8 +10,8 @@ import PandoraHeader from "./components/PandoraHeader.vue"
   </header>
 
   <main>
-    test
     <pandora-header />
+    <p-form></p-form>
   </main>
 </template>
 
