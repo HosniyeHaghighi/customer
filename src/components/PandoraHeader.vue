@@ -1,24 +1,46 @@
 <template>
-  <div class="w-full flex items-center justify-between p-5 bg-white">
-    <div class="flex flex-col">
-      <!-- <PBadge :icon="icon"></PBadge> -->
-      <PBreadcrumb>
-        <span>کاربران</span>
-        <span>کاربر 45675</span>
-      </PBreadcrumb>
-      <span class="p-text-primary-60 font-weight: 500">جزئیات پرونده و مشخصات کاربری</span>
-    </div>
-    <div>
-      <PButton type="secondary" outline :start-icon="closeCircleBoldDuotone"
-        >احراز هویت نشده</PButton
-      >
+  <div class="w-full flex items-center justify-between p-5">
+    <slot name="start">
+      <div class="flex items-center gap-x-3">
+        <PBadge :type="badge?.type" :icon="badge?.icon" :title="badge?.title" />
+        <div class="flex flex-col">
+          <span v-if="title?.length" class="text-base font-extrabold p-text-primary-100">{{
+            title
+          }}</span>
+          <span v-if="subtitle?.length" class="text-sm font-medium p-text-primary-60">{{
+            subtitle
+          }}</span>
+        </div>
+      </div>
+    </slot>
+    <div class="flex items-center gap-x-1.5">
+      <slot name="action"></slot>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { PButton, PBreadcrumb, PBadge } from 'pandora-design-system'
-import closeCircleBoldDuotone from 'pandora-icons/closeCircleBoldDuotone'
+import { PBadge } from 'pandora-design-system'
 
-// import userAi2Iconly from 'pandora-icons/userAi2Iconly'
+export type BadgeType =
+  | 'primary'
+  | 'secondary'
+  | 'accent'
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | string
+interface IPandoraHeaderProps {
+  badge?: {
+    type?: BadgeType
+    icon?: any
+    title?: string
+  }
+  title?: string
+  subtitle?: string
+}
+
+defineProps<IPandoraHeaderProps>()
+
 </script>
