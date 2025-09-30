@@ -69,22 +69,20 @@
 <script setup lang="ts">
 import './main.scss'
 import PandoraHeader from './components/PandoraHeader.vue'
-import PForm from './components/IdentityInfo.vue'
-import { PBreadcrumb, PSidebarItem, PDropdown, PTextInput } from 'pandora-design-system'
+import { PBreadcrumb, PSidebarItem } from 'pandora-design-system'
 import { PButton, PMenu, PSvg } from 'pandora-design-system'
 import closeCircleBoldDuotone from 'pandora-icons/closeCircleBoldDuotone'
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import infoCircleOutline from 'pandora-icons/infoCircleOutline'
 import altArrowDownOutline from 'pandora-icons/altArrowDownOutline'
-import userIdOutline from 'pandora-icons/userIdOutline'
 import userOutline from 'pandora-icons/userOutline'
 import documentTextOutline from 'pandora-icons/documentTextOutline'
 import wadOfMoneyOutline from 'pandora-icons/wadOfMoneyOutline'
 import databaseOutline from 'pandora-icons/databaseOutline'
 import document2Outline from 'pandora-icons/document2Outline'
-import IdentityInfo from './components/IdentityInfo.vue';
-import ContactInfo from './components/ContactInfo.vue';
-import GeographicInfo from './components/GeographicInfo.vue';
+import IdentityInfo from './components/IdentityInfo.vue'
+import ContactInfo from './components/ContactInfo.vue'
+import GeographicInfo from './components/GeographicInfo.vue'
 
 const operationMenu = ref(false)
 const moreMenu = ref(false)

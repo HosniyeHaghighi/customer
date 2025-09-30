@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font */
+@import "./assets/font.css";
 * {
-    font-family: "IRANYekanXVF" !important;
+  font-family: "IRANYekanXVF" !important;
+  font-variation-settings: "dots" 1 !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-font-feature-settings: "ss02" !important;
+  -webkit-font-feature-settings: "ss02" !important;
+  font-feature-settings: "ss02" !important;
 }
