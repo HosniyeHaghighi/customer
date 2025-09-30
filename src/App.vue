@@ -1,5 +1,5 @@
 <template>
-  <div dir="rtl" class="w-full bg-[#f3f0ff] pt-[4.25rem] ps-[4.25rem] pe-[2.75rem] min-h-screen">
+  <div dir="rtl" class="w-full bg-[#8677c2] pt-[4.25rem] ps-[4.25rem] pe-[2.75rem] pb-12 min-h-screen">
     <main class="flex w-full flex-col bg-white rounded-3xl">
 
       <pandora-header class="p-6">
@@ -29,7 +29,7 @@
       </pandora-header>
 
 
-      <div class="flex w-full gap-x-3 px-4 pb-4">
+      <div class="flex w-full gap-x-3 px-4">
 
         <div class="flex flex-col w-[17.75rem] border-t border-x rounded-t-2xl p-border-primary-8">
           <pandora-header
@@ -50,7 +50,7 @@
         </div>
 
 
-        <div class="flex flex-col flex-grow gap-y-4">
+        <div class="flex flex-col flex-grow gap-y-4 pb-4">
 
           <IdentityInfo />
           
