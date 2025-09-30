@@ -39,9 +39,7 @@
         </div>
         <div>
           <PDropdown title="شغل" :options="typeOfJobOptions" size="lg" multiple>
-            <template #link>
-              ایجاد برچسب جدید
-            </template>
+            <template #link> ایجاد برچسب جدید </template>
           </PDropdown>
         </div>
       </div>
@@ -167,5 +165,8 @@ const isMarried = computed(() => genderValue.value == 1)
 <style lang="scss" scoped>
 .item-wrapper {
   @apply grid grid-cols-12 items-center w-full gap-x-2;
+  & > * {
+    min-width: 3rem;
+  }
 }
 </style>

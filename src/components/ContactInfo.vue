@@ -3,12 +3,12 @@
     class="contact-info-card flex flex-col flex-1 border rounded-2xl p-border-primary-8 px-5 gap-y-5"
   >
     <pandora-header
-      :badge="{ type: 'success', icon: infoCircleOutline }"
+      :badge="{ type: 'warning', icon: phoneBold }"
       title="اطلاعات جغرافیایی"
       subtitle="لیست آدرس‌های پستی کاربر"
     >
       <template #action>
-        <PButton type="success" outline>آدرس جدید</PButton>
+        <PButton type="warning" outline>شماره جدید</PButton>
       </template>
     </pandora-header>
 
@@ -33,7 +33,7 @@ import { AgGridVue } from 'ag-grid-vue3'
 import { ModuleRegistry } from 'ag-grid-community'
 import { AllCommunityModule } from 'ag-grid-community'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
-import infoCircleOutline from 'pandora-icons/infoCircleOutline'
+import phoneBold from 'pandora-icons/phoneBold'
 import { PButton } from 'pandora-design-system'
 import OperationsCellRenderer from './OperationsCellRenderer.vue'
 import PandoraHeader from './PandoraHeader.vue'
@@ -64,6 +64,7 @@ const columnDefs = ref([
   },
   {
     headerName: 'عملیات',
+
     cellRenderer: 'OperationsCellRenderer',
     width: 140,
   },
@@ -79,7 +80,6 @@ const gridOptions = {
 <style>
 .contact-info-card {
   padding: 1.5rem; /* 24px */
-
 }
 
 /* --- ag-Grid Customization --- */

@@ -1,22 +1,59 @@
 <template>
   <div class="operations-container">
-    <button class="op-btn">...</button>
+    <PMenu v-model="moreMenu" :items="menuItemsWithChildren" />
     <button class="op-btn">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <svg
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
         <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
     </button>
   </div>
 </template>
 
-<script>
-// No script logic is needed for this simple display component
-export default {
-  name: 'OperationsCellRenderer',
-};
+<script setup lang="ts">
+import { PMenu } from 'pandora-design-system'
+import infoCircleOutline from 'pandora-icons/infoCircleOutline'
+import { ref } from 'vue'
+
+const moreMenu = ref(false)
+
+const menuItemsWithChildren = ref<any[]>([
+  {
+    title: 'برچسب',
+    startIcon: infoCircleOutline,
+
+    children: [
+      {
+        title: 'فرزند ۱-۱',
+        startIcon: infoCircleOutline,
+      },
+      {
+        title: 'فرزند ۱-۲',
+        startIcon: infoCircleOutline,
+        children: [
+          { title: 'فرزند ۳-۱', startIcon: infoCircleOutline },
+          {
+            title: 'فرزند ۳-۲',
+            startIcon: infoCircleOutline,
+            children: [
+              { title: 'فرزند ۳-۱', startIcon: infoCircleOutline },
+              { title: 'فرزند ۳-۲', startIcon: infoCircleOutline },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+])
 </script>
-
-
 
 <style scoped>
 .operations-container {
@@ -24,7 +61,7 @@ export default {
   align-items: center;
   gap: 0.5rem; /* 8px */
   /* This helps center it perfectly in the ag-Grid cell */
-  width: 100%; 
+  width: 100%;
   height: 100%;
 }
 
