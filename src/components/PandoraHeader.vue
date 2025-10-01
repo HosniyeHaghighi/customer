@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex items-center justify-between ">
+  <div class="w-full flex items-center justify-between pt-5 pb-7 px-5">
     <slot name="start">
       <div class="flex items-center gap-x-3">
         <PBadge :type="badge?.type" :icon="badge?.icon" :title="badge?.title" />

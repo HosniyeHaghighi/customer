@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col border rounded-2xl p-border-primary-8 px-5">
-    <pandora-header
+    <pandora-header 
       :badge="{
         type: 'info',
         icon: userIdOutline,
@@ -13,7 +13,7 @@
         <PButton type="info" fill>ذخیره تغییرات</PButton>
       </template>
     </pandora-header>
-    <div class="w-full grid grid-cols-3 gap-x-2">
+    <div class="w-full grid grid-cols-3 gap-x-1.5">
       <div class="flex flex-col gap-y-2 w-full">
         <PDropdown title="نوع مشتری" :options="typeOfCustomerOptions" size="lg"> </PDropdown>
         <div class="item-wrapper">
@@ -58,9 +58,10 @@
             title="جستوجو در برچسب ها"
             :options="typeOfMarridOptions"
             size="lg"
-          ></PDropdown>
+          >
+          <template #link> ایجاد برچسب جدید </template>
+        </PDropdown>
         </div>
-        <span class="mb-7">ایجاد برچسب جدید</span>
       </div>
       <div class="flex flex-col w-full gap-y-2">
         <div class="flex items-center w-full gap-x-2">
@@ -70,15 +71,15 @@
         <div><PTextInput title="نام رسمی" size="lg"></PTextInput></div>
         <div><PTextInput title="کد عضویت" size="lg"></PTextInput></div>
 
-        <div>
+        <div >
           <PDropdown
             v-model="genderValue"
             title="جستوجو در برچسب ها"
             :options="typeOfMarridOptions"
             size="lg"
-          ></PDropdown>
+          ><template #link> ایجاد برچسب جدید </template>
+        </PDropdown>
         </div>
-        <span class="mb-7">ایجاد برچسب جدید</span>
       </div>
     </div>
   </div>
