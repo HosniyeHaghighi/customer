@@ -1,9 +1,7 @@
 <template>
-  <div
-    class="contact-info-card flex flex-col flex-1 border rounded-2xl p-border-primary-8 px-5 gap-y-5"
-  >
+  <div class="flex flex-col flex-1 border rounded-2xl p-border-primary-8 px-5 gap-y-5">
     <pandora-header
-      :badge="{ type: 'success', icon:mapPointAddBold }"
+      :badge="{ type: 'success', icon: mapPointAddBold }"
       title="اطلاعات جغرافیایی"
       subtitle="لیست آدرس‌های پستی کاربر"
     >
@@ -21,7 +19,6 @@
         :gridOptions="gridOptions"
         :domLayout="'autoHeight'"
         :suppressHorizontalScroll="true"
-        
       >
       </ag-grid-vue>
     </div>
@@ -38,7 +35,6 @@ import mapPointAddBold from 'pandora-icons/mapPointAddBold'
 import { PButton, PMenu } from 'pandora-design-system'
 import OperationsCellRenderer from './OperationsCellRenderer.vue'
 import PandoraHeader from './PandoraHeader.vue'
-
 
 ModuleRegistry.registerModules([AllCommunityModule])
 const rowData = ref([
@@ -66,7 +62,7 @@ const columnDefs = ref([
   },
   {
     headerName: 'عملیات',
-    
+
     cellRenderer: 'OperationsCellRenderer',
     width: 140,
   },
@@ -80,11 +76,6 @@ const gridOptions = {
 </script>
 
 <style>
-.contact-info-card {
-  padding: 1.5rem; /* 24px */
-
-}
-
 /* --- ag-Grid Customization --- */
 .grid-wrapper {
   width: 100%;

@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col border rounded-2xl p-border-primary-8 px-5">
-    <pandora-header 
+  <div class="flex flex-col border rounded-2xl p-border-primary-8 pb-7 px-5">
+    <pandora-header
       :badge="{
         type: 'info',
         icon: userIdOutline,
@@ -17,9 +17,9 @@
       <div class="flex flex-col gap-y-2 w-full">
         <PDropdown title="نوع مشتری" :options="typeOfCustomerOptions" size="lg"> </PDropdown>
         <div class="item-wrapper">
-          <PDropdown title="جنسیت" :options="typeOfJenderOptions" size="lg" class="col-span-3">
+          <PDropdown title="جنسیت" :options="typeOfJenderOptions" size="lg" class="col-span-5">
           </PDropdown>
-          <PTextInput title="نام" size="lg" class="col-span-9"></PTextInput>
+          <PTextInput title="نام" size="lg" class="col-span-7"></PTextInput>
         </div>
         <div class="item-wrapper">
           <PDropdown
@@ -27,14 +27,14 @@
             title="وضعیت تاهل"
             :options="typeOfMarridOptions"
             size="lg"
-            class="col-span-3"
+            class="col-span-5"
           >
           </PDropdown>
           <PTextInput
             title="تاریخ ازدواج"
             size="lg"
             :disabled="!isMarried"
-            class="col-span-9"
+            class="col-span-7"
           ></PTextInput>
         </div>
         <div>
@@ -45,9 +45,9 @@
       </div>
       <div class="flex flex-col w-full gap-y-2">
         <div class="item-wrapper">
-          <PDropdown title="ملیت" :options="nationalOptions" size="lg" class="col-span-3">
+          <PDropdown title="ملیت" :options="nationalOptions" size="lg" class="col-span-5">
           </PDropdown>
-          <PTextInput title="کدملی/فراگیر" size="lg" class="col-span-9"></PTextInput>
+          <PTextInput title="کدملی/فراگیر" size="lg" class="col-span-7"></PTextInput>
         </div>
         <div><PTextInput title="نام خانوادگی" size="lg"></PTextInput></div>
         <div><PTextInput title="نام خانوادگی" size="lg"></PTextInput></div>
@@ -59,8 +59,8 @@
             :options="typeOfMarridOptions"
             size="lg"
           >
-          <template #link> ایجاد برچسب جدید </template>
-        </PDropdown>
+            <template #link> ایجاد برچسب جدید </template>
+          </PDropdown>
         </div>
       </div>
       <div class="flex flex-col w-full gap-y-2">
@@ -71,14 +71,14 @@
         <div><PTextInput title="نام رسمی" size="lg"></PTextInput></div>
         <div><PTextInput title="کد عضویت" size="lg"></PTextInput></div>
 
-        <div >
+        <div>
           <PDropdown
             v-model="genderValue"
             title="جستوجو در برچسب ها"
             :options="typeOfMarridOptions"
             size="lg"
-          ><template #link> ایجاد برچسب جدید </template>
-        </PDropdown>
+            ><template #link> ایجاد برچسب جدید </template>
+          </PDropdown>
         </div>
       </div>
     </div>
@@ -167,7 +167,7 @@ const isMarried = computed(() => genderValue.value == 1)
 .item-wrapper {
   @apply grid grid-cols-12 items-center w-full gap-x-2;
   & > * {
-    min-width: 3rem;
+    min-width: 5rem;
   }
 }
 </style>

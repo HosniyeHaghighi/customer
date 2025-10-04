@@ -1,6 +1,6 @@
 <template>
   <div
-    class="contact-info-card flex flex-col flex-1 border rounded-2xl p-border-primary-8 px-5 gap-y-5"
+    class="contact-info-card flex flex-col flex-1 border rounded-2xl p-border-primary-8 pb-7 px-5 gap-y-5"
   >
     <pandora-header
       :badge="{ type: 'warning', icon: phoneBold }"
@@ -33,8 +33,8 @@ import { AgGridVue } from 'ag-grid-vue3'
 import { ModuleRegistry } from 'ag-grid-community'
 import { AllCommunityModule } from 'ag-grid-community'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
-// import phoneBold from 'pandora-icons/phoneBold'
-// import { PButton } from 'pandora-design-system'
+import phoneBold from 'pandora-icons/phoneBold'
+import { PButton } from 'pandora-design-system'
 import OperationsCellRenderer from './OperationsCellRenderer.vue'
 import PandoraHeader from './PandoraHeader.vue'
 
@@ -78,10 +78,6 @@ const gridOptions = {
 </script>
 
 <style>
-.contact-info-card {
-  padding: 1.5rem; /* 24px */
-}
-
 /* --- ag-Grid Customization --- */
 .grid-wrapper {
   width: 100%;
