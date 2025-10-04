@@ -31,7 +31,7 @@
 
       <div class="flex w-full gap-x-3 px-4">
 
-        <div class="flex flex-col w-[17.75rem] border-t border-x rounded-t-2xl p-border-primary-8 ">
+        <div class="flex flex-col w-[17.75rem] border-t border-x rounded-t-2xl p-border-primary-8">
           <pandora-header
             :badge="{ type: 'accent', icon: userOutline }"
             title="محمد عرفان وصال‌طلب"
@@ -51,12 +51,12 @@
 
 
         <div class="flex flex-col flex-grow gap-y-4 pb-4">
-
+          
           <IdentityInfo />
           
-          <div class="flex w-full gap-x-3 ">
-
+          <div class="flex w-full gap-x-3">
             <ContactInfo />
+
             
             <GeographicInfo />
           </div>
