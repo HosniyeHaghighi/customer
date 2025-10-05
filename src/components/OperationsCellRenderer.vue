@@ -1,5 +1,8 @@
 <template>
-  <div class="w-full flex items-center gap-2 py-2 overflow-visible transform translate-x-0 z-50">
+  <div
+    class="w-full flex items-center gap-2 py-2 overflow-visible"
+    :class="{ 'row-active': moreMenu }"
+  >
     <PMenu v-model="moreMenu" :items="menuItemsWithChildren" />
   </div>
 </template>
@@ -7,9 +10,17 @@
 <script setup lang="ts">
 import { PMenu } from 'pandora-design-system'
 import infoCircleOutline from 'pandora-icons/infoCircleOutline'
-import { ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 
 const moreMenu = ref(false)
+
+watch(
+  moreMenu,
+  () => {
+    console.log('more', moreMenu.value)
+  },
+  { immediate: true },
+)
 
 const menuItemsWithChildren = ref<any[]>([
   {

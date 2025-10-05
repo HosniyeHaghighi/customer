@@ -14,7 +14,7 @@
 
     <div class="grid-wrapper">
       <ag-grid-vue
-        class="ag-theme-alpine ag-custom-contact-style"
+        class="ag-theme-alpine ag-custom-contact-style overflow-visible z-0"
         :columnDefs="columnDefs"
         :rowData="rowData"
         :enableRtl="true"
@@ -74,6 +74,7 @@ const gridOptions = {
   components: {
     OperationsCellRenderer,
   },
+  suppressRowTransform: true,
 }
 </script>
 
@@ -123,8 +124,7 @@ const gridOptions = {
   display: flex;
   align-items: center;
   line-height: 1; /* Fixes vertical alignment */
-  z-index: 50;
-  overflow: visible;
+  z-index: 1;
   max-height: 50px;
   width: 100%;
   height: 100%;
@@ -146,5 +146,18 @@ const gridOptions = {
 
 .ag-custom-contact-style .ag-body-horizontal-scroll {
   display: none;
+}
+
+.ag-root,
+.ag-center-cols-container,
+.ag-row {
+  overflow: visible;
+}
+
+.ag-row {
+  z-index: 0 !important;
+}
+.ag-row:has(.row-active) {
+  z-index: 1 !important;
 }
 </style>
