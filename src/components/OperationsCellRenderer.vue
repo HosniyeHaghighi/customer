@@ -1,5 +1,5 @@
 <template>
-  <div class="operations-container">
+  <div class="overflow-visible w-full flex items-acenter pb-2 pt-1 gap-2">
     <PMenu v-model="moreMenu" :items="menuItemsWithChildren" />
     <button class="op-btn">
       <svg
@@ -56,15 +56,6 @@ const menuItemsWithChildren = ref<any[]>([
 </script>
 
 <style scoped>
-.operations-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; /* 8px */
-  /* This helps center it perfectly in the ag-Grid cell */
-  width: 100%;
-  height: 100%;
-}
-
 .op-btn {
   background-color: #f7fafc; /* gray-50 */
   border: 1px solid #e2e8f0; /* gray-200 */
