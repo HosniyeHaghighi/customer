@@ -1,20 +1,6 @@
 <template>
-  <div class="overflow-visible w-full flex items-acenter pb-2 pt-1 gap-2">
+  <div class="w-full flex items-center gap-2 py-2 overflow-visible transform translate-x-0 z-50">
     <PMenu v-model="moreMenu" :items="menuItemsWithChildren" />
-    <button class="op-btn">
-      <svg
-        width="12"
-        height="12"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
-    </button>
   </div>
 </template>
 
