@@ -123,6 +123,11 @@ const gridOptions = {
   display: flex;
   align-items: center;
   line-height: 1; /* Fixes vertical alignment */
+  z-index: 50;
+  overflow: visible;
+  max-height: 50px;
+  width: 100%;
+  height: 100%;
 }
 
 .ag-custom-contact-style .row-number-cell {

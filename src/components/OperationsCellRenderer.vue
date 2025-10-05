@@ -1,20 +1,6 @@
 <template>
-  <div class="operations-container">
+  <div class="w-full flex items-center gap-2 py-2 overflow-visible transform translate-x-0 z-50">
     <PMenu v-model="moreMenu" :items="menuItemsWithChildren" />
-    <button class="op-btn">
-      <svg
-        width="12"
-        height="12"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <polyline points="6 9 12 15 18 9"></polyline>
-      </svg>
-    </button>
   </div>
 </template>
 
@@ -56,15 +42,6 @@ const menuItemsWithChildren = ref<any[]>([
 </script>
 
 <style scoped>
-.operations-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; /* 8px */
-  /* This helps center it perfectly in the ag-Grid cell */
-  width: 100%;
-  height: 100%;
-}
-
 .op-btn {
   background-color: #f7fafc; /* gray-50 */
   border: 1px solid #e2e8f0; /* gray-200 */
