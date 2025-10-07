@@ -84,7 +84,7 @@ const gridOptions = {
   width: 100%;
   border: 1px solid #e2e8f0; /* gray-200 */
   border-radius: 0.75rem; /* 12px */
-  overflow: hidden; /* Important for border-radius */
+  overflow: visible; /* Important for border-radius */
 }
 
 .ag-custom-contact-style {
