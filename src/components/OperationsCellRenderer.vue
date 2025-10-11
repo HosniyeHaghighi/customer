@@ -3,7 +3,7 @@
     class="w-full flex items-center gap-2 py-2 overflow-visible"
     :class="{ 'row-active': moreMenu }"
   >
-    <PMenu v-model="moreMenu" :items="menuItemsWithChildren" />
+    <PMenu v-model="moreMenu" :items="menuItemsWithChildren" trigger-size="sm" />
   </div>
 </template>
 

@@ -38,7 +38,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const mergedGridOptions = computed(() => ({
   suppressRowTransform: true,
-  rowHeight: 48,
+  rowHeight: 40,
   headerHeight: 48,
   ...props.gridOptions
 }))
@@ -64,7 +64,7 @@ const mergedGridOptions = computed(() => ({
   --ag-row-border-style: solid;
   --ag-row-border-width: 1px;
   --ag-row-border-color: var(--ag-border-color);
-  --ag-row-height: 48px;
+  --ag-row-height: 2.5rem;
 }
 
 .ag-custom-base-style .ag-root-wrapper {
@@ -74,7 +74,7 @@ const mergedGridOptions = computed(() => ({
 .ag-custom-base-style .ag-header {
   border-bottom: 1px solid var(--ag-border-color) !important;
   background-color: #f7fafc;
-  min-height: 48px !important;
+  min-height: 2.5rem !important;
 }
 
 .ag-custom-base-style .ag-header-cell {
@@ -106,7 +106,7 @@ const mergedGridOptions = computed(() => ({
 
 .ag-custom-base-style .ag-row {
   border-top: none;
-  height: 48px !important;
+  height: 2.5rem !important;
 }
 
 .ag-custom-base-style .ag-row:not(:last-child) {
